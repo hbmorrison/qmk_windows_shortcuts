@@ -1,0 +1,15 @@
+{
+    "module_name": "Windows Shortcuts",
+    "maintainer": "hbmorrison",
+    "license": "Apache-2.0",
+    "url": "https://github.com/hbmorrison/qmk_windows_shortcuts.git",
+    "features": {},
+    "keycodes": [
+        { "key": "WINDOWS_SHORTCUTS_NEXT_TAB",        "aliases": ["WS_NTAB"] },
+        { "key": "WINDOWS_SHORTCUTS_PREVIOUS_TAB",    "aliases": ["WS_PTAB"] },
+        { "key": "WINDOWS_SHORTCUTS_NEXT_WINDOW",     "aliases": ["WS_NWIN"] },
+        { "key": "WINDOWS_SHORTCUTS_PREVIOUS_WINDOW", "aliases": ["WS_PWIN"] },
+        { "key": "WINDOWS_SHORTCUTS_NEXT_DESK",       "aliases": ["WS_NDESK"] },
+        { "key": "WINDOWS_SHORTCUTS_PREVIOUS_DESK",   "aliases": ["WS_PDESK"] }
+    ]
+}
