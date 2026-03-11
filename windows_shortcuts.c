@@ -24,25 +24,27 @@ bool process_record_windows_shortcuts(uint16_t keycode, keyrecord_t *record) {
 
   // Process standard Windows shortcut keys.
 
-  switch (keycode) {
+  if (record->event.pressed) {
+    switch (keycode) {
 
-    // Manage next and previous tab.
+      // Manage next and previous tab.
 
-    case WS_NTAB:
-      tap_code16(C(KC_TAB));
-      return false;
-    case WS_PTAB:
-      tap_code16(S(C(KC_TAB)));
-      return false;
+      case WS_NTAB:
+        tap_code16(C(KC_TAB));
+        return false;
+      case WS_PTAB:
+        tap_code16(S(C(KC_TAB)));
+        return false;
 
-    // Manage next and previous desk.
+      // Manage next and previous desk.
 
-    case WS_NDESK:
-      tap_code16(C(G(KC_RIGHT)));
-      return false;
-    case WS_PDESK:
-      tap_code16(C(G(KC_LEFT)));
-      return false;
+      case WS_NDSK:
+        tap_code16(C(G(KC_RIGHT)));
+        return false;
+      case WS_PDSK:
+        tap_code16(C(G(KC_LEFT)));
+        return false;
+    }
   }
 
   // Process alt-tab behaviour as a special case.
